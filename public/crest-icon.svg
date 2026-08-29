@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Shield Outline -->
+  <path d="M50 5 L85 18 V50 C85 75 50 95 50 95 C50 95 15 75 15 50 V18 L50 5 Z" fill="#751421" stroke="#C49E31" stroke-width="3"/>
+  
+  <!-- Inner Shield Line -->
+  <path d="M50 11 L79 22 V49 C79 70 50 87 50 87 C50 87 21 70 21 49 V22 L50 11 Z" fill="#5F121C" stroke="#D5B44C" stroke-width="1" stroke-dasharray="2 2"/>
+  
+  <!-- Center Open Book of Knowledge -->
+  <path d="M35 55 C42 52 48 53 50 57 C52 53 58 52 65 55 V42 C58 39 52 40 50 44 C48 40 42 39 35 42 Z" fill="#FAF8F2" stroke="#C49E31" stroke-width="1.2"/>
+  
+  <!-- Radiating Torch Flame / Sun Rays -->
+  <path d="M50 25 C47 31 53 35 50 40 C47 35 53 31 50 25 Z" fill="#C49E31"/>
+  <circle cx="50" cy="27" r="3" fill="#F5DF88"/>
+  
+  <!-- Stars -->
+  <polygon points="35,32 37,36 41,36 38,39 39,43 35,40 31,43 32,39 29,36 33,36" fill="#D5B44C"/>
+  <polygon points="65,32 67,36 71,36 68,39 69,43 65,40 61,43 62,39 59,36 63,36" fill="#D5B44C"/>
+
+  <!-- Academic Ribbon -->
+  <path d="M25 72 Q50 80 75 72 L70 78 Q50 86 30 78 Z" fill="#C49E31"/>
+  <text x="50" y="76.5" font-family="'Cinzel', serif" font-size="4.2" font-weight="bold" fill="#3D070E" text-anchor="middle" letter-spacing="0.5">ARYANS</text>
+</svg>

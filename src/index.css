@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  /* Custom institutional scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #FAF8F2;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #8E1727;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #5F121C;
+  }
+}
+
+@layer components {
+  /* Royal Badge */
+  .badge-royal {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold uppercase tracking-wider bg-royal-50 text-royal-800 border border-royal-200 rounded-full;
+  }
+
+  .badge-gold {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold uppercase tracking-wider bg-gold-50 text-gold-700 border border-gold-300 rounded-full;
+  }
+
+  /* Prestige Buttons */
+  .btn-royal {
+    @apply relative inline-flex items-center justify-center gap-2 px-6 py-3 font-semibold text-white transition-all duration-300 bg-gradient-to-r from-royal-800 via-royal-700 to-royal-900 rounded-lg shadow-md hover:shadow-royal-glow hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-gold {
+    @apply relative inline-flex items-center justify-center gap-2 px-6 py-3 font-semibold text-stone-900 transition-all duration-300 bg-gradient-to-r from-gold-400 via-gold-300 to-gold-500 rounded-lg shadow-md hover:shadow-gold-glow hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-50;
+  }
+
+  .btn-outline-royal {
+    @apply relative inline-flex items-center justify-center gap-2 px-6 py-3 font-semibold text-royal-800 transition-all duration-300 bg-white border border-royal-800/30 rounded-lg hover:bg-royal-50 hover:border-royal-800 hover:-translate-y-0.5;
+  }
+
+  .btn-white {
+    @apply relative inline-flex items-center justify-center gap-2 px-6 py-3 font-semibold text-royal-900 transition-all duration-300 bg-white rounded-lg shadow-lg hover:bg-ivory-50 hover:shadow-xl hover:-translate-y-0.5;
+  }
+
+  /* Academic Card Style */
+  .card-prestige {
+    @apply bg-white border border-stone-200/80 rounded-2xl shadow-prestige transition-all duration-300 hover:shadow-prestige-lg hover:border-royal-200/80;
+  }
+
+  /* Shimmer text effect */
+  .text-gold-shimmer {
+    background: linear-gradient(110deg, #C49E31 20%, #F9E8A2 50%, #C49E31 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Watermark crest background */
+  .bg-watermark {
+    background-image: radial-gradient(circle at 100% 100%, rgba(142, 23, 39, 0.03) 0%, transparent 60%);
+  }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.animate-slideUp {
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
+@supports (padding: max(0px)) {
+  .pb-safe {
+    padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+  }
+}

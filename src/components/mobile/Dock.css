@@ -1,0 +1,82 @@
+.dock-outer {
+  margin: 0 auto;
+  display: flex;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.dock-panel {
+  position: fixed;
+  bottom: 0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: flex-end;
+  width: fit-content;
+  gap: 0.6rem;
+  border-radius: 1.5rem;
+  background: rgba(43, 8, 13, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid rgba(196, 158, 49, 0.45);
+  box-shadow: 0 12px 35px -8px rgba(0, 0, 0, 0.65), 0 0 20px rgba(196, 158, 49, 0.15);
+  padding: 0 0.6rem 0.5rem;
+  z-index: 50;
+}
+
+.dock-item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: rgba(61, 7, 14, 0.85);
+  border: 1px solid rgba(196, 158, 49, 0.35);
+  box-shadow:
+    0 4px 10px -1px rgba(0, 0, 0, 0.4),
+    0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  outline: none;
+  color: #FAF9F6;
+  transition: background-color 0.2s, border-color 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.dock-item:hover,
+.dock-item:focus-visible {
+  background: #5F121C;
+  border-color: #C49E31;
+  color: #FAF9F6;
+}
+
+.dock-item.is-active {
+  background: #C49E31;
+  color: #2B080D;
+  border-color: #F9E8A2;
+  box-shadow: 0 0 14px rgba(196, 158, 49, 0.6);
+}
+
+.dock-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dock-label {
+  position: absolute;
+  top: -1.75rem;
+  left: 50%;
+  width: fit-content;
+  white-space: pre;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(196, 158, 49, 0.5);
+  background: #1B0407;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #FAF9F6;
+  transform: translateX(-50%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
