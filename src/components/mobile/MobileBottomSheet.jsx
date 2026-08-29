@@ -167,7 +167,7 @@ export default function MobileBottomSheet({
                 className="w-full btn-royal text-xs py-3 font-bold uppercase tracking-wider mt-2 flex items-center justify-center gap-2"
               >
                 <Mail size={15} />
-                <span>Submit via Email (mailto)</span>
+                <span>Submit via Email</span>
               </button>
             </form>
           )}
