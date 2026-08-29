@@ -91,7 +91,7 @@ export default function AcademicPage({ onOpenApplyModal }) {
             <span>The Aryans' School, Jhansi • Nurturing Scholastic Excellence</span>
             <div className="flex items-center gap-3">
               <span className="inline-block w-2 h-2 rounded-full bg-gold-400"></span>
-              <span className="text-gold-300 font-semibold">Interactive 3D Perspective</span>
+              <span className="text-gold-300 font-semibold">Interactive Perspective</span>
             </div>
           </div>
         </div>
