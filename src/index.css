@@ -60,6 +60,7 @@
   .text-gold-shimmer {
     background: linear-gradient(110deg, #C49E31 20%, #F9E8A2 50%, #C49E31 80%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 

@@ -1,7 +1,19 @@
 import React from 'react';
-import { BookOpen, Sparkles, CheckCircle2, HeartHandshake, Layers, Award, ChevronRight } from 'lucide-react';
+import { BookOpen, Sparkles, CheckCircle2, HeartHandshake, Layers, Award, ChevronRight, Compass, MoveHorizontal } from 'lucide-react';
+import CircularGallery from '../components/effects/CircularGallery';
 
 export default function AcademicPage({ onOpenApplyModal }) {
+  const academicGalleryItems = [
+    { image: "/academics/academic-1.jpg", text: "" },
+    { image: "/academics/academic-2.jpg", text: "" },
+    { image: "/academics/academic-3.jpg", text: "" },
+    { image: "/academics/academic-4.jpg", text: "" },
+    { image: "/academics/academic-5.jpg", text: "" },
+    { image: "/academics/academic-6.jpg", text: "" },
+    { image: "/academics/academic-7.jpg", text: "" },
+    { image: "/academics/academic-8.png", text: "" }
+  ];
+
   const academicPillars = [
     {
       title: "Play-Way Teaching Techniques",
@@ -27,7 +39,7 @@ export default function AcademicPage({ onOpenApplyModal }) {
 
   return (
     <div className="py-12 sm:py-16 animate-fadeIn">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
@@ -42,6 +54,46 @@ export default function AcademicPage({ onOpenApplyModal }) {
             Simplifying complex concepts through play-way discovery while anchoring character in timeless values.
           </p>
           <div className="w-20 h-1 bg-gold-500 mx-auto rounded-full"></div>
+        </div>
+
+        {/* 3D CIRCULAR GALLERY SECTION */}
+        <div className="relative rounded-3xl overflow-hidden bg-gradient-to-b from-royal-950 via-royal-900 to-royal-950 border-2 border-gold-500/50 shadow-2xl p-4 sm:p-8">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pb-4 border-b border-gold-500/20 text-center sm:text-left">
+            <div>
+              <div className="inline-flex items-center gap-2 text-gold-400 text-xs font-bold uppercase tracking-widest">
+                <Compass size={14} />
+                <span>Interactive Visual Showcase</span>
+              </div>
+              <h2 className="font-cinzel text-xl sm:text-2xl font-bold text-white mt-1">
+                Experience Our Academic Environment
+              </h2>
+            </div>
+            <div className="flex items-center gap-2 text-xs font-medium text-gold-200/80 bg-royal-900/80 px-4 py-2 rounded-full border border-gold-500/30">
+              <MoveHorizontal size={15} className="text-gold-400 animate-pulse" />
+              <span>Drag or scroll horizontally to explore</span>
+            </div>
+          </div>
+
+          {/* WebGL Circular Gallery Canvas Container */}
+          <div className="h-[420px] sm:h-[520px] lg:h-[580px] w-full relative my-2 select-none">
+            <CircularGallery
+              items={academicGalleryItems}
+              bend={3}
+              textColor="#F9E8A2"
+              borderRadius={0.06}
+              scrollEase={0.03}
+              scrollSpeed={2}
+              font="bold 28px Figtree"
+            />
+          </div>
+
+          <div className="pt-4 border-t border-gold-500/20 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-stone-300 text-center sm:text-left">
+            <span>The Aryans' School, Jhansi • Nurturing Scholastic Excellence</span>
+            <div className="flex items-center gap-3">
+              <span className="inline-block w-2 h-2 rounded-full bg-gold-400"></span>
+              <span className="text-gold-300 font-semibold">Interactive 3D Perspective</span>
+            </div>
+          </div>
         </div>
 
         {/* Core Methodology Cards */}
@@ -113,3 +165,4 @@ export default function AcademicPage({ onOpenApplyModal }) {
     </div>
   );
 }
+
